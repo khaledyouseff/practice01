@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import pages.SwitchWindowPage;
 import pages.autoCompletePage;
 import pages.mainPage;
 
@@ -13,6 +14,7 @@ public class baseTest {
      protected WebDriver driver;
      protected mainPage mainPage;
      protected autoCompletePage autoCompletePage;
+     protected SwitchWindowPage switchWindowPage ;
     @BeforeTest
     public void setup(){
         WebDriverManager.chromedriver().setup();
@@ -21,6 +23,7 @@ public class baseTest {
         driver.get("https://formy-project.herokuapp.com/");
         mainPage=new mainPage(driver);
         autoCompletePage = new autoCompletePage(driver);
+        switchWindowPage = new SwitchWindowPage(driver);
 
     }
     /*

@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class mainPage {
@@ -24,5 +25,15 @@ public dragAndDropPage clickDragAndDropPage(){
     public uploadFilePage clickUploadFilePage(){
         driver.findElement(By.linkText("File Upload")).click();
         return new uploadFilePage(driver);
+    }
+    public void scrollDown(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("scrollBy(0,1000)");
+    }
+
+    public SwitchWindowPage clickSwitchWindowPage(){
+        driver.findElement(By.linkText("Switch Window")).click();
+        return new SwitchWindowPage(driver);
+
     }
 }
