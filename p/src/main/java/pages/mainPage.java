@@ -31,9 +31,9 @@ public dragAndDropPage clickDragAndDropPage(){
         js.executeScript("scrollBy(0,1000)");
     }
 
-    public SwitchWindowPage clickSwitchWindowPage(){
+    public SwitchWindowAndAlertPage clickSwitchWindowPage(){
         driver.findElement(By.linkText("Switch Window")).click();
-        return new SwitchWindowPage(driver);
+        return new SwitchWindowAndAlertPage(driver);
 
     }
 }
