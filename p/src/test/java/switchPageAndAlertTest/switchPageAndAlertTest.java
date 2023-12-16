@@ -56,6 +56,4 @@ public class switchPageAndAlertTest extends baseTest{
          alert.accept();
      }
 
-
-
 }

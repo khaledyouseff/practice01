@@ -36,4 +36,9 @@ public dragAndDropPage clickDragAndDropPage(){
         return new SwitchWindowAndAlertPage(driver);
 
     }
+    public completeFormPage clickCompleteForm(){
+        driver.findElement(By.linkText("Complete Web Form")).click();
+        return new completeFormPage(driver);
+
+    }
 }
